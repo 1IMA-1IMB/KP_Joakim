@@ -24,20 +24,11 @@ connection.connect(function(err) {
   console.log('connected as id ' + connection.threadId);
 });
 
-connection.query('SELECT * FROM datamaskin', function (error, results, fields) {
-    if (error) throw error;
-    console.log('The solution is: ', results);
-  });
-   
-  connection.end();
 
-
-/* 
 app.get('/', (request, response) => {
-    if (error) throw error;
     response.send(JSON.stringify('Hello World'))
 })
-*/
+
 
 app.get('/getallstudents', (request, response) => {
 
